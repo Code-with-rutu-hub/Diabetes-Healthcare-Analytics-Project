@@ -362,35 +362,41 @@ results.to_csv("diabetes_predictions.csv", index=False)
 
 
 ### Insights & Findings  
-1. **Model Y** is the most affordable option at ~$33.9K with the lowest EMI ($529.37).  
-2. **Model X** has the highest average price and EMI, making it the most premium used Tesla option.  
-3. **Model 3** is the most balanced in terms of price vs. mileage.  
-4. **Cybertruck** data suggests it's new to the market (lower mileage) but priced mid-range.  
-5. **States like NY, OH, NC, VA** appear across the top for mileage, suggesting high usage or resales.  
-6. **Accident-free rate** is high across all models, with **Model 3 and Y** being the safest (>90%).
+1. Glucose, BMI, and Age are the strongest diabetes indicators.
+2. Obesity and high glucose are strongly linked with diabetes risk.
+3. Machine learning can accurately classify patient risk levels.
+
 
 ---
 
 ### Recommendations  
 
-#### 1. 🎯 Target High-Volume States  
-Focus marketing and resale efforts in states like **NY, OH, NC, VA**, which show high vehicle turnover and mileage demand.
+#### 1.Hospitals should implement periodic blood sugar monitoring programs for high-risk groups.
 
-#### 2. 💼 Price Based on DAS  
-Use **Driver Assist System tiers** as a pricing lever.  
-> Full Self-Driving variants command significantly higher average prices (up to **$63.2K**).
+#### 2. Healthcare providers should promote:
 
-#### 3. 📉 Promote Lower EMI Models  
-**Model Y and Model 3** with lower EMIs may be ideal for entry-level EV buyers or fleet purchases.
+Fitness programs
+Nutritional counseling
+Obesity reduction initiatives
 
-#### 4. 🔍 Expand Dataset for Model Y & Cybertruck  
-As newer models, their datasets will grow. Monitoring pricing trends can help forecast **depreciation** and **resale value**.
+to lower diabetes risk.
+
+#### 3. Encourage:
+
+Regular physical activity
+Healthy diet habits
+Reduced sugar intake
+Stress management
+
+through awareness campaigns.
+
+#### 4. Healthcare organizations should create automated alerts and follow-up systems for critical patients.
 
 ---
 
 ### Future Work
-* Integrate live market data (Tesla API, vehicle resale sites)
-* Include model year and battery degradation metrics
-* Predict resale value using regression models (Python + ML)
-* Build a web-based dashboard using Power BI Embedded or Streamlit
-* Analyze charging patterns and locations (if location data becomes available)
+* Integrating cloud-based healthcare systems
+* Using deep learning models
+* Creating mobile healthcare applications
+* Building personalized treatment recommendation systems
+* Adding real-time patient monitoring
