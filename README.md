@@ -308,41 +308,57 @@ X = df[['Glucose','BMI','Age','BloodPressure','Insulin','Pregnancies']]
 y = df['Outcome']
 ```
 
-- 2. Average BMI by Outcome
+- Step 3: Train Logistic Regression model
 ```
-SELECT
-    Outcome,
-    ROUND(AVG(BMI),2) AS AvgBMI
-FROM diabetes_data
-GROUP BY Outcome;
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=42
+)
+
+model = LogisticRegression(max_iter=1000)
+model.fit(X_train, y_train)
 ```
 
-- 2. Average BMI by Outcome
+- Step 4: Predictions + probability
 ```
-SELECT
-    Outcome,
-    ROUND(AVG(BMI),2) AS AvgBMI
-FROM diabetes_data
-GROUP BY Outcome;
+y_pred = model.predict(X_test)
+y_prob = model.predict_proba(X_test)[:,1]
 ```
 
-- 2. Average BMI by Outcome
+- Step 5: Create final result table
 ```
-SELECT
-    Outcome,
-    ROUND(AVG(BMI),2) AS AvgBMI
-FROM diabetes_data
-GROUP BY Outcome;
+results = X_test.copy()
+
+results['Actual'] = y_test.values
+results['Predicted'] = y_pred
+results['Probability'] = y_prob
 ```
 
-- 2. Average BMI by Outcome
+- Step 6: Add Risk Category
 ```
-SELECT
-    Outcome,
-    ROUND(AVG(BMI),2) AS AvgBMI
-FROM diabetes_data
-GROUP BY Outcome;
+def risk_level(p):
+    if p > 0.75:
+        return "High Risk"
+    elif p > 0.5:
+        return "Medium Risk"
+    else:
+        return "Low Risk"
+
+results['Risk Category'] = results['Probability'].apply(risk_level)
 ```
+- Step 7: Add PatientID
+```
+results = results.reset_index(drop=True)
+results['PatientID'] = results.index + 1
+```
+
+Step 8: Save dataset for Power BI
+```
+results.to_csv("diabetes_predictions.csv", index=False)
+```
+
 
 
 ### Insights & Findings  
