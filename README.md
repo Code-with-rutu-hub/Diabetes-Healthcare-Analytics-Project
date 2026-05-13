@@ -282,12 +282,6 @@ Dashboard 2 — Health Metrics Dashboard
 <img width="766" height="430" alt="image" src="https://github.com/user-attachments/assets/36edfb99-9638-4430-9733-343f1673dcba" />
 
 
-![model x dashboard](https://github.com/user-attachments/assets/f3409ee2-8347-4a86-92da-971011239a3c)
-
-![model y](https://github.com/user-attachments/assets/c7567f61-9a0a-4c38-b835-32f0261c7d48)
-
-
----
 
 ### Build the Model in Python
 
@@ -359,6 +353,12 @@ Step 8: Save dataset for Power BI
 results.to_csv("diabetes_predictions.csv", index=False)
 ```
 
+<img width="746" height="432" alt="image" src="https://github.com/user-attachments/assets/38b231be-a8d2-4fbb-b46f-dfa3ab0512be" />
+
+
+
+
+---
 
 
 ### Insights & Findings  
