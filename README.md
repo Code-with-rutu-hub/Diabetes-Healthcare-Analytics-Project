@@ -3,7 +3,7 @@
 ---
 
 ### Project Overview  
-This project explores **state-wise stock sales data** for used Tesla vehicles across the U.S., leveraging **Power BI dashboards** to compare model performance, price trends, mileage, and accident history.
+
 
 The goal is to extract insights into:
 Analyze a diabetes healthcare dataset to identify:
