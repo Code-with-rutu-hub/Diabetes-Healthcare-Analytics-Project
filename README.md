@@ -289,6 +289,61 @@ Dashboard 2 — Health Metrics Dashboard
 
 ---
 
+### Build the Model in Python
+
+Step 1: Load dataset
+
+```
+import pandas as pd
+
+df = pd.read_csv("diabetes.csv")
+df.head()
+```
+
+Step 2: Define features & target
+
+
+```
+X = df[['Glucose','BMI','Age','BloodPressure','Insulin','Pregnancies']]
+y = df['Outcome']
+```
+
+- 2. Average BMI by Outcome
+```
+SELECT
+    Outcome,
+    ROUND(AVG(BMI),2) AS AvgBMI
+FROM diabetes_data
+GROUP BY Outcome;
+```
+
+- 2. Average BMI by Outcome
+```
+SELECT
+    Outcome,
+    ROUND(AVG(BMI),2) AS AvgBMI
+FROM diabetes_data
+GROUP BY Outcome;
+```
+
+- 2. Average BMI by Outcome
+```
+SELECT
+    Outcome,
+    ROUND(AVG(BMI),2) AS AvgBMI
+FROM diabetes_data
+GROUP BY Outcome;
+```
+
+- 2. Average BMI by Outcome
+```
+SELECT
+    Outcome,
+    ROUND(AVG(BMI),2) AS AvgBMI
+FROM diabetes_data
+GROUP BY Outcome;
+```
+
 
 ### Insights & Findings  
 1. **Model Y** is the most affordable option at ~$33.9K with the lowest EMI ($529.37).  
