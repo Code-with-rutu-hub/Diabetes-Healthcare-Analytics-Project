@@ -28,16 +28,6 @@ Analyze a diabetes healthcare dataset to identify:
 
 ---
 
-### Excel for Data Formatting & Pre-Processing  
-
-- Cleaned missing values and duplicates  
-- Formatted numeric fields (e.g., price, mileage, EMI)  
-- Standardized column names and categories  
-- Created calculated fields like EMI (if missing)  
-- Prepared structured layout for Power BI import  
-
-
-
 
 
 ### Dataset Breakdown  
